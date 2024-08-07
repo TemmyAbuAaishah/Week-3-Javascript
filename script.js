@@ -40,6 +40,27 @@ button.addEventListener('click', () => {
 });
 
 
+const list = document.getElementById('list');
+const addItemBtn = document.querySelector('#addItemBtn');
+
+
+addItemBtn.addEventListener('click', () => {
+    const newItem = document.createElement('li');
+    newItem.textContent = "New Item";
+    list.appendChild(newItem);
+});
+
+
+const text = document.getElementById('text');
+const changeStyleBtn = document.getElementById('changeStyleBtn');
+
+changeStyleBtn.addEventListener('click', () => {
+    text.style.color = "blue";
+    text.style.fontsize = "100px";
+});
+
+
+
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
